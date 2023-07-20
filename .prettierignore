@@ -1,0 +1,22 @@
+# Ignore artifacts
+swagger-ui/
+build/
+
+# Dependencies
+node_modules/
+
+# Focus only in the front-end
+functions/
+
+# React Native
+android
+ios
+.expo
+docs
+package.json
+package-lock.json
+yarn.lock
+dist/
+node_modules/
+Pods/
+example/android/app/build/

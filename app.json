@@ -1,0 +1,90 @@
+{
+  "expo": {
+    "name": "Matter",
+    "slug": "Matter",
+    "scheme":"mtter",
+    "version": "0.9.12",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.matter.matter",
+      "buildNumber": "1",
+      "associatedDomains":[
+        "applinks:mtter.io"
+      ],
+      "infoPlist":{
+        "LSApplicationQueriesSchemes": ["mtter","https"],
+        "NSMicrophoneUsageDescription":"Matter needs access to your microphone to post a video",
+        "NSPhotoLibraryUsageDescription":"Matter needs access to your gallery to post a video or photo",
+        "NSPhotoLibraryAddUsageDescription":"Matter needs access to your gallery to post a video or photo",
+        "NSCameraUsageDescription":"Matter needs access to your camera to post a video or photo"
+      }
+    },
+    "android": {
+      "package": "com.matter",
+      "versionCode":40,
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#f74b73"
+      },
+      "intentFilters":[
+        {
+          "action":"VIEW",
+          "autoVerify":true,
+          "data":[
+            {
+              "scheme":"https",
+              "host":"mtter.io",
+              "pathPrefix":"/invite"
+            },
+            {
+              "scheme": "mtter",
+              "host": "*",
+              "pathPrefix": "/"
+            },
+            {
+              "scheme":"https",
+              "host":"www.mtter.io",
+              "pathPrefix":"/invite"
+            }
+          ],
+          "category":[
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "permissions":["CAMERA","READ_EXTERNAL_STORAGE","WRITE_EXTERNAL_STORAGE","RECORD_AUDIO","READ_CONTACTS","WRITE_CONTACTS","INTERNET"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/ic_stat_ic_notification.png",
+          "color": "#F74B73",
+          "androidCollapsedTitle": "your-app-name",
+          "iosDisplayInForeground": true
+        }
+      ]
+    ]
+  }
+}
+
+
